@@ -3,6 +3,8 @@ import Main from "../layouts/Main";
 import Home from "../Page/Home";
 import Login from "../Page/Login/Login";
 import Signup from "../Page/Signup/Signup";
+import ItemView from "../Page/QuickView/ItemView";
+import Cart from "../Page/Cart/Cart";
 export const router = createBrowserRouter([
     {
       path: "/",
@@ -12,16 +14,16 @@ export const router = createBrowserRouter([
             path:'/',
             element:<Home></Home>
         },
-        // {
-        //   path:'itemView/:id',
-        //   element:<ItemView></ItemView>
+        {
+          path:'itemView/:id',
+          element:<ItemView></ItemView>
 
-        // },
-        // {
-        //   path:'cart',
-        //   element: <Cart></Cart>
+        },
+        {
+          path:'cart',
+          element: <Cart></Cart>
 
-        // },
+        },
         // {
         //   path:'membership',
         //   element:<PrivateRouter><Membership></Membership></PrivateRouter>
