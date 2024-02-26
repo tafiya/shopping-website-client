@@ -5,6 +5,8 @@ import Login from "../Page/Login/Login";
 import Signup from "../Page/Signup/Signup";
 import ItemView from "../Page/QuickView/ItemView";
 import Cart from "../Page/Cart/Cart";
+import Dashboard from "../layouts/DashBoard";
+
 export const router = createBrowserRouter([
     {
       path: "/",
@@ -19,11 +21,11 @@ export const router = createBrowserRouter([
           element:<ItemView></ItemView>
 
         },
-        {
-          path:'cart',
-          element: <Cart></Cart>
+        // {
+        //   path:'cart',
+        //   element: <Cart></Cart>
 
-        },
+        // },
         // {
         //   path:'membership',
         //   element:<PrivateRouter><Membership></Membership></PrivateRouter>
@@ -47,42 +49,42 @@ export const router = createBrowserRouter([
     },
   
    
-    // {
-    //   path: 'dashboard',
-    //   element: <Dashboard></Dashboard>,
-    //   children: [
-    //     {
-    //       path: 'cart',
-    //       element: <Cart></Cart>
-    //     },
-    //     // {
-    //     //   path: 'payment',
-    //     //   element: <Payment></Payment>
-    //     // },
-    //     // {
-    //     //   path: 'paymentHistory',
-    //     //   element: <PaymentHistory></PaymentHistory>
-    //     // },
+    {
+      path: 'dashboard',
+      element: <Dashboard></Dashboard>,
+      children: [
+        {
+          path: 'cart',
+          element: <Cart></Cart>
+        },
+        // {
+        //   path: 'payment',
+        //   element: <Payment></Payment>
+        // },
+        // {
+        //   path: 'paymentHistory',
+        //   element: <PaymentHistory></PaymentHistory>
+        // },
 
-    //       // admin routes
-    //       {
-    //         path: 'addItems',
-    //         element: <AddItems></AddItems>
-    //       },
+          // admin routes
+          // {
+          //   path: 'addItems',
+          //   element: <AddItems></AddItems>
+          // },
         
-    //       // {
-    //       //   path: 'manageItems',
-    //       //   element: <AdminRoute><ManageItems></ManageItems></AdminRoute>
-    //       // },
-    //       // {
-    //       //   path: 'updateItem/:id',
-    //       //   element: <AdminRoute><UpdateItem></UpdateItem></AdminRoute>,
-    //       //   loader: ({params}) => fetch(`https://e-commerce-server-mu.vercel.app/menu/${params.id}`)
-    //       // },
-    //       {
-    //         path: 'users',
-    //         element: <AllUsers></AllUsers>
-    //       }
-    //   ]
-    // }
+          // {
+          //   path: 'manageItems',
+          //   element: <AdminRoute><ManageItems></ManageItems></AdminRoute>
+          // },
+          // {
+          //   path: 'updateItem/:id',
+          //   element: <AdminRoute><UpdateItem></UpdateItem></AdminRoute>,
+          //   loader: ({params}) => fetch(`https://e-commerce-server-mu.vercel.app/menu/${params.id}`)
+          // },
+          // {
+          //   path: 'users',
+          //   element: <AllUsers></AllUsers>
+          // }
+      ]
+    }
   ]);

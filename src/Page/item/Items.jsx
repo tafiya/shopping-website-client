@@ -11,7 +11,7 @@ const Items = () => {
           
           <div className=" grid md:grid-cols-2 grid-cols-1  lg:grid-cols-3 gap-6">
           {
-            items.map(item=><EachItems key={item._id} item={item}></EachItems>)
+            items.map(item=><EachItems key={item?._id} item={item}></EachItems>)
           } 
 
           </div>

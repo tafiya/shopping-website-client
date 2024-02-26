@@ -83,9 +83,9 @@ const EachItemView = ({NewItem}) => {
        
      
           <div>
-          <button onClick={handleCart} className="btn btn-outline"> <TiShoppingCart />Add to cart</button> <br />
+          <button onClick={handleCart} className=" hover:btn p-4 inline-flex gap-2 rounded-lg text-white   bg-red-200 font-semibold mb-2"> <TiShoppingCart  size={'1.5em'} />Add to cart</button> <br />
           
-          <Link to='/' className=" "><button><IoCloseSharp size={'2em'}  /></button></Link>
+          <Link to='/' className=" hover:btn  "><button><IoCloseSharp size={'2em'} color="red"  /></button></Link>
 
           </div>
           

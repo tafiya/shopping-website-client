@@ -39,19 +39,21 @@ const Cart = () => {
     }
 
     return (
-        <div className=" max-w-screen-xl mx-auto">
+        <div className="md:border md:border-l-orange-100 md:p-4 rounded-lg">
             <div className="flex justify-evenly mb-8 ">
-                <h2 className="md:text-4xl text-xl">Items: {cart.length}</h2>
-                <h2 className="md:text-4xl text-xl">Total Price: {totalPrice}</h2>
+                <button className="md:text-3xl text-2xl bg-red-200 p-2 md:p-3 rounded-xl text-gray-500 font-bold  shadow-lg ">Items: {cart.length} </button>
+                {/* <h2 className="md:text-3xl text-2xl"></h2> */}
+                <button className="md:text-3xl text-2xl bg-red-200 p-2 md:p-3 rounded-xl text-gray-500 font-bold shadow-lg ">Total: {totalPrice} $ </button>
+                {/* <h2 className="md:text-3xl text-2xl">Total Price: {totalPrice}</h2> */}
 
             </div>
-            <div className="  ">
-                <table className="table ">
+            <div className=" overflow-x-auto ">
+                <table className="table table-zebra md:w-full">
                     {/* head */}
-                    <thead >
+                    <thead className="md:text-lg bg-red-100 shadow rounded-xl" >
                         <tr>
                             <th>
-                                #
+                                No
                             </th>
                             <th>Image</th>
                             <th>Item</th>
@@ -69,15 +71,15 @@ const Cart = () => {
                                     <div className="flex items-center gap-3">
                                         <div className="avatar">
                                             <div className="mask mask-squircle w-12 h-12">
-                                                <img src={item.image} alt="Avatar Tailwind CSS Component" />
+                                                <img src={item.picture} alt="Avatar Tailwind CSS Component" />
                                             </div>
                                         </div>
                                     </div>
                                 </td>
-                                <td >
+                                <td className=" md:uppercase md:text-base" >
                                     {item.name}
                                 </td>
-                                <td>${item.price}</td>
+                                <td className=" text-lg font-semibold"> ${item.price}</td>
                                 <th>
                                     <button
                                         onClick={() => handleDelete(item._id)}

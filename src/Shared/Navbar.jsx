@@ -21,9 +21,9 @@ const Navbar = () => {
     .catch(error=>console.log(error));
   }
     const navOption=<>
-    <li><Link to='/'>Home</Link></li>
+    <li><Link className=" text-lg font-semibold md:mr-4" to='/'>Home</Link></li>
 
-    <li><Link to='cart'>
+    <li><Link className="text-lg " to='dashboard/cart'>
      <FaShoppingCart />
   <div className="badge badge-secondary"> +{cart.length}</div>
 </Link></li>
@@ -41,7 +41,7 @@ const Navbar = () => {
              {navOption}
             </ul>
           </div>
-         <a className="btn btn-ghost uppercase  text-xl">D e p o t</a>
+         <a className="md:ml-10 italic   text-xl">S t y l e <span className=" text-red-300 font-semibold">H a v e n</span> </a>
         </div>
         <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal px-1 inline-flex">
@@ -53,12 +53,12 @@ const Navbar = () => {
         user?<div className="dropdown dropdown-bottom dropdown-end text-black">
         <label tabIndex={0} className=" m-1"><img src={user.photoURL? user.photoURL:profile} alt="" className=" border rounded-full h-12 w-12" /></label>
         <ul tabIndex={0} className="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box w-52">
-          <li><a className="text-black uppercase text-base font-semibold">{user.displayName}</a></li>
-          <li><a><button className="hover:btn btn-outline   " onClick={handleLogout}>Logout</button></a></li>
-          <li><Link to='/dashboard/cart'><button className=" hover:btn btn-outline  ">Dashboard</button></Link></li>
+          <li><a className="text-red-300 uppercase text-base font-semibold">{user.displayName}</a></li>
+          <li><a><button className="hover:text-red-600 hover:text-xl hover:font-bold text-lg text-red-300 font-semibold   " onClick={handleLogout}>Logout</button></a></li>
+       
 
         </ul>
-      </div> :<Link to='/login'><button className=" btn btn-outline text-black">Join us</button></Link>
+      </div> :<Link to='/login'><button className=" hover:btn p-2 rounded-lg text-white  bg-red-200 font-semibold">Join Us</button></Link>
     
       }
      
