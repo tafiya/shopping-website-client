@@ -19,9 +19,9 @@ Style Heaven is an online platform that allows users to browse, purchase, and ex
 
 ## Project Live link
 https://e-commerce-client-69395.web.app/
-- Admin email- pinkey@gmail.com password-Tafiya19039@
+
 
 
 
 ## 🔗Server site Github Links
-https://github.com/tafiya/e-commerce-server
+https://github.com/tafiya/shopping-website-server
